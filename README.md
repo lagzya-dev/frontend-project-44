@@ -23,7 +23,7 @@ git clone git@github.com:lagzya-dev/frontend-project-44.git
 cd frontend-project-44/
 make install
 ```
-<p id="game-description" ></p>
+
 
 # Игры
 После установки игры вызываются следующими командами:
@@ -34,8 +34,7 @@ make install
     <dt style="font-weight: bold;">brain-progression</dt><dd>Определение пропущенного члена прогрессии.</dd>
     <dt style="font-weight: bold;">brain-prime</dt><dd>Определение того, простое ли число.</dd>
 </dl>
-
-
+<p id="game-description" ></p>
 Примерный геймплей игр:
 <dl>
     <dt style="font-weight: bold;">brain-even</dt><dd><img src="https://i.imgur.com/D0BZRNv.gif"></dd>
