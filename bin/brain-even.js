@@ -15,7 +15,7 @@ export default function StartEvent(name) {
   }
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
   const num = Math.floor(Math.random() * 100);
-  console.log(`Question:  ${num}`);
+  console.log(`Question: ${num}`);
 
   const answer = readlineSync.question('You answer ');
   if (answer !== 'yes' && answer !== 'no') {

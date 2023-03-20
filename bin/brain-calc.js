@@ -20,7 +20,7 @@ export default function StartEvent(name) {
   const num = Math.floor(Math.random() * 100);
   const num2 = Math.floor(Math.random() * 100);
   const item = opertaion[Math.floor(Math.random() * opertaion.length)];
-  console.log(`Question:  ${num} ${item} ${num2}`);
+  console.log(`Question: ${num} ${item} ${num2}`);
   let validAnswer = 0;
   if (item === '+') {
     validAnswer = num + num2;

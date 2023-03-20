@@ -24,7 +24,7 @@ export default function StartEvent(name) {
   const num2 = Math.floor(Math.random() * 10);
   const validAnswer = NOD(num, num2);
 
-  console.log(`Question:  ${num} ${num2}`);
+  console.log(`Question: ${num} ${num2}`);
   const answer = readlineSync.question('You answer ');
   if (answer === `${validAnswer}`) {
     console.log('Correct!');
