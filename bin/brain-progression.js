@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import cli from '../src/cli.js';
+import generateMassive from '../src/progress.js';
 
 let tryAnswer = 0;
 
@@ -33,18 +34,4 @@ export default function StartEvent(name) {
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
   }
-}
-
-function generateMassive() {
-  const range = Math.floor(Math.random() * (10 - 5) + 5);
-  const progress = Math.floor(Math.random() * 100);
-  const startNumber = Math.floor(Math.random() * 100);
-  const result = [];
-
-  for (let i = 0; i <= range; i += 1) {
-    const num = startNumber + (progress * i);
-    result.push(num);
-  }
-
-  return result;
 }
