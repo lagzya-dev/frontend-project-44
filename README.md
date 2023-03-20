@@ -34,3 +34,13 @@ make install
     <dt style="font-weight: bold;">brain-progression</dt><dd>Определение пропущенного члена прогрессии.</dd>
     <dt style="font-weight: bold;">brain-prime</dt><dd>Определение того, простое ли число.</dd>
 </dl>
+
+
+Примерный геймплей игр:
+<dl>
+    <dt style="font-weight: bold;">brain-even</dt><dd><img src="https://i.imgur.com/D0BZRNv.gif"></dd>
+    <dt style="font-weight: bold;">brain-calc</dt><dd><img src="https://i.imgur.com/ncd9OjD.gif"></dd>
+    <dt style="font-weight: bold;">brain-gcd</dt><dd><img src="https://i.imgur.com/lQrYg7o.gif"></dd>
+    <dt style="font-weight: bold;">brain-progression</dt><dd><img src="https://i.imgur.com/hNPXyPj.gif"></dd>
+    <dt style="font-weight: bold;">brain-prime</dt><dd><img src="https://i.imgur.com/HhMGgPy.gif"></dd>
+</dl>
