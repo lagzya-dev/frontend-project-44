@@ -4,8 +4,7 @@ import cli from '../cli.js';
 
 let tryAnswer = 0;
 
-// eslint-disable-next-line no-array-constructor
-const opertaion = Array('+', '-', '*');
+const opertaion = ['+', '-', '*'];
 
 function StartEvent(name = undefined) {
   if (name === undefined) {
