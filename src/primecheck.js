@@ -1,17 +1,6 @@
-export default function isPrime(n) {
-  if (n < 2) {
-    return 'Число должно быть больше 1';
-  } if (n === 2) {
-    return true;
+export default function isPrime(num) {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) { return false; }
   }
-
-  let i = 2;
-  const limit = Math.sqrt(n);
-  while (i <= limit) {
-    if (n % i === 0) {
-      return false;
-    }
-    i += 1;
-  }
-  return true;
+  return num > 1;
 }
