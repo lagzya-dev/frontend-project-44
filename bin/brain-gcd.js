@@ -19,7 +19,7 @@ export default function StartEvent(name) {
     console.log(`Congratulations, ${name}!`);
     return;
   }
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
+  console.log('Find the greatest common divisor of given numbers.');
   const num = Math.floor(Math.random() * 10);
   const num2 = Math.floor(Math.random() * 10);
   const validAnswer = NOD(num, num2);
