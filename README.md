@@ -23,8 +23,6 @@ git clone git@github.com:lagzya-dev/frontend-project-44.git
 cd frontend-project-44/
 make install
 ```
-
-[![asciicast](https://asciinema.org/a/kQvH2HekUsJAjgmh3JZsDjLlc.svg)](https://asciinema.org/a/kQvH2HekUsJAjgmh3JZsDjLlc)
 <p id="game-description" ></p>
 
 # Игры
