@@ -16,7 +16,7 @@ export default function StartEvent(name) {
     console.log(`Congratulations, ${name}!`);
     return;
   }
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
+  console.log('What is the result of the expression?');
   const num = Math.floor(Math.random() * 100);
   const num2 = Math.floor(Math.random() * 100);
   const item = opertaion[Math.floor(Math.random() * opertaion.length)];
