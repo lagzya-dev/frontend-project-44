@@ -17,12 +17,12 @@ export default function StartEvent(name) {
   // eslint-disable-next-line no-use-before-define
   const result = generateMassive();
   const validAnswer = result[Math.floor(Math.random() * result.length)];
-  let text = 'What number is missing in the progression?\nQuestion: ';
+  let text = 'What number is missing in the progression?\nQuestion:';
   for (let i = 0; i < result.length; i += 1) {
     if (result[i] === validAnswer) {
-      text += '... ';
+      text += ' ..';
     } else {
-      text += `${result[i]} `;
+      text += ` ${result[i]}`;
     }
   }
   console.log(text);
