@@ -19,7 +19,7 @@ export default function StartEvent(name) {
   const validAnswer = result[Math.floor(Math.random() * result.length)];
   let text = 'What number is missing in the progression?\nQuestion: ';
   for (let i = 0; i < result.length; i += 1) {
-    if (result[i] == validAnswer) {
+    if (result[i] === validAnswer) {
       text += '... ';
     } else {
       text += `${result[i]} `;
