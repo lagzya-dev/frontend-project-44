@@ -13,7 +13,7 @@ function StartEvent(name = undefined) {
     console.log(`Congratulations, ${name}!`);
     return;
   }
-  const result = Math.floor(Math.random() * 100);
+  const result = Math.floor(Math.random() * 100) + 1;
   // eslint-disable-next-line no-use-before-define
   const validAnswer = isPrime(result) ? 'yes' : 'no';
   const text = `Answer "yes" if given number is prime. Otherwise answer "no".\nQuestion: ${result}`;
