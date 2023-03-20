@@ -5,11 +5,8 @@ import generateMassive from '../progress.js';
 
 let tryAnswer = 0;
 
-export default function StartEvent(name) {
-  if (name === undefined) {
-    // eslint-disable-next-line no-param-reassign
-    name = cli();
-  }
+export default function StartEvent() {
+  const name = cli();
   if (tryAnswer === 3) {
     console.log(`Congratulations, ${name}!`);
     return;
