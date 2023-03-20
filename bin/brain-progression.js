@@ -35,3 +35,4 @@ export default function StartEvent(name) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
   }
 }
+StartEvent();
