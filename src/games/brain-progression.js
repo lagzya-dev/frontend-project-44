@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import cli from '../cli.js';
 import generateMassive from '../progress.js';
