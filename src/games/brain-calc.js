@@ -7,7 +7,7 @@ let tryAnswer = 0;
 // eslint-disable-next-line no-array-constructor
 const opertaion = Array('+', '-', '*');
 
-export default function StartEvent(name = undefined) {
+function StartEvent(name = undefined) {
   if (name === undefined) {
     // eslint-disable-next-line no-param-reassign
     name = cli();
@@ -38,3 +38,5 @@ export default function StartEvent(name = undefined) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
   }
 }
+
+export default StartEvent;
