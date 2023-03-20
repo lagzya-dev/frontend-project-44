@@ -27,6 +27,7 @@ export default function StartEvent(name) {
   console.log(`Question:  ${num} ${num2}`);
   const answer = readlineSync.question('You answer ');
   if (answer === `${validAnswer}`) {
+    console.log('Correct!');
     tryAnswer += 1;
     StartEvent(name);
   } else {

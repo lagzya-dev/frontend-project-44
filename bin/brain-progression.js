@@ -29,7 +29,7 @@ export default function StartEvent(name) {
   const answer = readlineSync.question('You answer ');
   if (answer === `${validAnswer}`) {
     tryAnswer += 1;
-    console.log('Correct');
+    console.log('Correct!');
     StartEvent(name);
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
