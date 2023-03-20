@@ -7,8 +7,11 @@ let tryAnswer = 0;
 // eslint-disable-next-line no-array-constructor
 const opertaion = Array('+', '-', '*');
 
-export default function StartEvent() {
-  const name = cli();
+export default function StartEvent(name = undefined) {
+  if (name === undefined) {
+    // eslint-disable-next-line no-param-reassign
+    name = cli();
+  }
   if (tryAnswer === 3) {
     console.log(`Congratulations, ${name}!`);
     return;
