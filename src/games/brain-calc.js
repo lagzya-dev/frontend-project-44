@@ -8,11 +8,11 @@ function startEvent() {
   const quest = `${num} ${item} ${num2}`;
   let validAnswer = 0;
   if (item === '+') {
-    validAnswer = num + num2;
+    validAnswer = `${num + num2}`;
   } else if (item === '-') {
-    validAnswer = num - num2;
+    validAnswer = `${num - num2}`;
   } else if (item === '*') {
-    validAnswer = num * num2;
+    validAnswer = `${num * num2}`;
   }
   return [quest, validAnswer];
 }
