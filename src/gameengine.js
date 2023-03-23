@@ -4,7 +4,9 @@ import gamepicker from './gamepicker.js';
 const maxtrycount = 3;
 
 export default (game) => {
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(gamepicker[game].lable);
   for (let turn = 1; turn <= maxtrycount; turn += 1) {
     const [quest, validAnswer] = gamepicker[game].startEvent();
