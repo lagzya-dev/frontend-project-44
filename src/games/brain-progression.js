@@ -5,7 +5,13 @@ function startEvent() {
   const validAnswer = `${result[getRandom(result.length - 1)]}`;
   let text = '';
   for (let i = 0; i < result.length; i += 1) {
-    if (result[i] === validAnswer) {
+    if (i === 0) {
+      if (`${result[i]}` === validAnswer) {
+        text += '..';
+      } else {
+        text += `${result[i]}`;
+      }
+    } else if (`${result[i]}` === validAnswer) {
       text += ' ..';
     } else {
       text += ` ${result[i]}`;
