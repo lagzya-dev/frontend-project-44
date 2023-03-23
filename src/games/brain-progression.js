@@ -3,7 +3,7 @@ import { getRandom, generateMassive } from '../utils.js';
 function startEvent() {
   const result = generateMassive();
   const validAnswer = `${result[getRandom(result.length - 1)]}`;
-  let text = 'What number is missing in the progression?\nQuestion:';
+  let text = '';
   for (let i = 0; i < result.length; i += 1) {
     if (result[i] === validAnswer) {
       text += ' ..';
