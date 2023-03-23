@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import StartEvent from '../src/games/brain-calc.js';
+import startGame from '../src/gameengine.js';
 
-StartEvent();
+startGame('calc');

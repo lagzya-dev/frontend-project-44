@@ -1,37 +1,12 @@
-import readlineSync from 'readline-sync';
-import cli from '../cli.js';
+import { getRandom, nod } from '../utils.js';
 
-let tryAnswer = 0;
-
-// eslint-disable-next-line no-array-constructor
-function NOD(x, y) {
-  if (y > x) return NOD(y, x);
-  if (!y) return x;
-  return NOD(y, x % y);
-}
-function StartEvent(name = undefined) {
-  if (name === undefined) {
-    // eslint-disable-next-line no-param-reassign
-    name = cli();
-  }
-  if (tryAnswer === 3) {
-    console.log(`Congratulations, ${name}!`);
-    return;
-  }
+function startEvent() {
   console.log('Find the greatest common divisor of given numbers.');
-  const num = Math.floor(Math.random() * 10);
-  const num2 = Math.floor(Math.random() * 10);
-  const validAnswer = NOD(num, num2);
-
-  console.log(`Question: ${num} ${num2}`);
-  const answer = readlineSync.question('You answer ');
-  if (answer === `${validAnswer}`) {
-    console.log('Correct!');
-    tryAnswer += 1;
-    StartEvent(name);
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
-  }
+  const num = getRandom(10);
+  const num2 = getRandom(10);
+  const validAnswer = nod(num, num2);
+  const quest = `${num} ${num2}`;
+  return [quest, validAnswer];
 }
-
-export default StartEvent;
+const lable = 'Find the greatest common divisor of given numbers.';
+export default { startEvent, lable };

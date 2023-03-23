@@ -1,35 +1,13 @@
-import readlineSync from 'readline-sync';
-import cli from '../cli.js';
+import { getRandom } from '../utils.js';
 
-let tryAnswer = 0;
-function StartEvent(name = undefined) {
-  if (name === undefined) {
-    // eslint-disable-next-line no-param-reassign
-    name = cli();
+function startEvent() {
+  const num = getRandom(100);
+  const quest = `${num}`;
+  let validAnswer = 'no';
+  if (num % 2 === 0) {
+    validAnswer = 'yes';
   }
-  if (tryAnswer === 3) {
-    console.log(`Congratulations, ${name}!`);
-    return;
-  }
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  const num = Math.floor(Math.random() * 100);
-  console.log(`Question: ${num}`);
-  const answer = readlineSync.question('You answer ');
-  if (answer !== 'yes' && answer !== 'no') {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was ${num % 2 === 0 ? 'yes' : 'no'}.\n Let's try again, ${name}!`);
-    return;
-  }
-  if (num % 2 === 0 && answer === 'yes') {
-    console.log('Correct!');
-    tryAnswer += 1;
-    StartEvent(name);
-  } else if (num % 2 !== 0 && answer === 'no') {
-    console.log('Correct!');
-    tryAnswer += 1;
-    StartEvent(name);
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was ${num % 2 === 0 ? 'yes' : 'no'}.\n Let's try again, ${name}!`);
-  }
+  return [quest, validAnswer];
 }
-
-export default StartEvent;
+const lable = 'Answer "yes" if the number is even, otherwise answer "no"';
+export default { startEvent, lable };

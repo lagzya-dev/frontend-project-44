@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import StartEvent from '../src/games/brain-progression.js';
+import startGame from '../src/gameengine.js';
 
-StartEvent();
+startGame('progression');

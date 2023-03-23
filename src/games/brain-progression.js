@@ -1,21 +1,8 @@
-import readlineSync from 'readline-sync';
-import cli from '../cli.js';
-import generateMassive from '../progress.js';
+import { getRandom, generateMassive } from '../utils.js';
 
-let tryAnswer = 0;
-
-function StartEvent(name = undefined) {
-  if (name === undefined) {
-    // eslint-disable-next-line no-param-reassign
-    name = cli();
-  }
-  if (tryAnswer === 3) {
-    console.log(`Congratulations, ${name}!`);
-    return;
-  }
-  // eslint-disable-next-line no-use-before-define
+function startEvent() {
   const result = generateMassive();
-  const validAnswer = result[Math.floor(Math.random() * result.length)];
+  const validAnswer = result[getRandom(result.length - 1)];
   let text = 'What number is missing in the progression?\nQuestion:';
   for (let i = 0; i < result.length; i += 1) {
     if (result[i] === validAnswer) {
@@ -24,15 +11,8 @@ function StartEvent(name = undefined) {
       text += ` ${result[i]}`;
     }
   }
-  console.log(text);
-  const answer = readlineSync.question('You answer ');
-  if (answer === `${validAnswer}`) {
-    tryAnswer += 1;
-    console.log('Correct!');
-    StartEvent(name);
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
-  }
+  const quest = text;
+  return [quest, validAnswer];
 }
-
-export default StartEvent;
+const lable = 'What number is missing in the progression?';
+export default { startEvent, lable };

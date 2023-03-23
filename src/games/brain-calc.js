@@ -1,24 +1,11 @@
-import readlineSync from 'readline-sync';
-import cli from '../cli.js';
+import { getRandom } from '../utils.js';
 
-let tryAnswer = 0;
-
-const opertaion = ['+', '-', '*'];
-
-function StartEvent(name = undefined) {
-  if (name === undefined) {
-    // eslint-disable-next-line no-param-reassign
-    name = cli();
-  }
-  if (tryAnswer === 3) {
-    console.log(`Congratulations, ${name}!`);
-    return;
-  }
-  console.log('What is the result of the expression?');
-  const num = Math.floor(Math.random() * 100);
-  const num2 = Math.floor(Math.random() * 100);
-  const item = opertaion[Math.floor(Math.random() * opertaion.length)];
-  console.log(`Question: ${num} ${item} ${num2}`);
+function startEvent() {
+  const opertaion = ['+', '-', '*'];
+  const num = getRandom(100);
+  const num2 = getRandom(100);
+  const item = opertaion[getRandom(opertaion.length - 1)];
+  const quest = `${num} ${item} ${num2}`;
   let validAnswer = 0;
   if (item === '+') {
     validAnswer = num + num2;
@@ -27,14 +14,8 @@ function StartEvent(name = undefined) {
   } else if (item === '*') {
     validAnswer = num * num2;
   }
-  const answer = readlineSync.question('You answer ');
-  if (answer === `${validAnswer}`) {
-    console.log('Correct!');
-    tryAnswer += 1;
-    StartEvent(name);
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${validAnswer}'.\n Let's try again, ${name}!`);
-  }
+  return [quest, validAnswer];
 }
+const lable = 'What is the result of the expression?';
 
-export default StartEvent;
+export default { startEvent, lable };
